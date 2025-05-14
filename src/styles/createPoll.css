@@ -1,0 +1,388 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFadeOut {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+
+.create-poll-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.6s ease-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .create-poll-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .create-poll-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .create-poll-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .create-poll-form input {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .create-button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-button:hover {
+    background-color: #0056b3;
+  }
+
+  .form-group input[type="radio"] {
+  margin-right: 0.5rem;
+  transform: scale(1.1);
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+.form-group > div {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+  
+  .back-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .back-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .back-button:hover {
+    color: #0056b3;
+  }
+  
+.button-row {
+  margin-top: 1.5rem;
+}
+
+.add-option-button {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.add-option-button:hover {
+  background-color: #ccc;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.remove-option-button {
+  background-color: #ff4d4f;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.37rem;
+  transition: background-color 0.2s ease;
+}
+
+.remove-option-button:hover {
+  background-color: #d9363e;
+}
+
+.toast-error {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f44336;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: slideInFadeOut 3s ease forwards;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.poll-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.poll-link {
+  text-decoration: none;
+  color: #333;
+  flex-grow: 1;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.copy-link-button,
+.delete-button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.copy-link-button {
+  background-color: #f39c12;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #e60000;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+}
+
+.modal-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.confirm-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: #333;
+}
+
+
+@media (max-width: 768px) {
+  .create-poll-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .create-poll-title {
+    font-size: 1.5rem;
+  }
+
+  .create-poll-form input {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+
+  .create-button,
+  .add-option-button {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .remove-option-button {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .toast-error {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-poll-container {
+    padding: 1rem;
+  }
+
+  .create-poll-title {
+    font-size: 1.3rem;
+  }
+
+  .button-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .option-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .remove-option-button {
+    width: 100%;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+  }
+
+  .toast-error {
+    width: calc(100% - 2rem);
+    left: 1rem;
+    right: 1rem;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 240px) {
+  .create-poll-container {
+    padding: 0.5rem;
+  }
+
+  .create-poll-title {
+    font-size: 1.2rem;
+  }
+
+  .create-poll-form label {
+    font-size: 0.9rem;
+  }
+
+  .create-poll-form input {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .add-option-button,
+  .create-button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .option-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .remove-option-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.4rem 0;
+    margin-top: 0.25rem;
+  }
+
+  .toast-error {
+    left: 5px;
+    right: 5px;
+    font-size: 0.8rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .back-button {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group > div {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

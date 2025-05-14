@@ -1,0 +1,142 @@
+.vote-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.vote-button.cancel {
+  background-color: #f44336;
+  margin-top: 1rem;
+}
+
+.vote-button.cancel:hover {
+  background-color: #d32f2f;
+}
+
+.back-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #eee;
+}
+
+.vote-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.option-list,
+.result-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.option-list li,
+.result-list li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.option-list label,
+.result-list li {
+  display: flex;
+  align-items: center;
+}
+
+.option-list input[type="radio"],
+.option-list input[type="checkbox"] {
+  margin-right: 0.75rem;
+  transform: scale(1.2);
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+.vote-button {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.vote-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.vote-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #444;
+}
+
+.result-list {
+  list-style: none;
+  padding: 0;
+}
+
+.result-list li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.result-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.result-bar-container {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 20px;
+  position: relative;
+}
+
+.result-bar {
+  background-color: #4caf50;
+  height: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: right;
+  padding-right: 6px;
+  white-space: nowrap;
+  transition: width 0.5s ease-in-out;
+}
+
+
+
