@@ -9,13 +9,12 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Здесь логика входа
     console.log('Вход выполнен:', { email, password });
     navigate('/');
   };
 
   const handleRegister = () => {
-    navigate('/register'); // должен существовать маршрут
+    navigate('/register');
   };
 
   const handleBackHome = () => {

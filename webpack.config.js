@@ -1,4 +1,3 @@
-// webpack.config.js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -10,7 +9,7 @@ module.exports = {
   output: {
     filename: isProduction ? '[name].[contenthash].js' : 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/', // важно для правильной маршрутизации
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -33,7 +32,7 @@ module.exports = {
     port: 3000,
     open: true,
     hot: !isProduction,
-    historyApiFallback: true, // <---- ВАЖНО: чтобы SPA работал при перезагрузке
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

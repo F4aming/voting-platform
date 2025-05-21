@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "gh-pages": "^3.1.0",
+    "bootstrap": "^5.3.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0"
@@ -22,6 +22,7 @@
     "css-loader": "^6.0.0",
     "eslint": "^8.0.0",
     "eslint-plugin-react": "^7.0.0",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.0.0",
     "style-loader": "^3.0.0",
     "ts-loader": "^9.5.2",
@@ -30,7 +31,7 @@
     "webpack-cli": "^4.0.0",
     "webpack-dev-server": "^4.0.0"
   },
-  "author": "Your Name",
+  "author": "MAX",
   "license": "MIT",
   "homepage": "https://F4aming.github.io/voting-platform"
 }
