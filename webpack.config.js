@@ -9,7 +9,7 @@ module.exports = {
   output: {
     filename: isProduction ? '[name].[contenthash].js' : 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '/voting-platform/',
   },
   module: {
     rules: [
