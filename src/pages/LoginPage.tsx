@@ -53,7 +53,7 @@ const LoginPage: React.FC = () => {
 
       <div className="back-home-section">
         <button className="back-home-button" onClick={handleBackHome}>
-          ← Назад на главную
+          Назад на главную
         </button>
       </div>
     </div>

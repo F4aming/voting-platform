@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage';
 import PollPage from './pages/PollPage';
 import PollCreator from './pages/PollCreator';
 import PollViewer from './pages/PollViewer';
+import AboutPage from './pages/AboutPage';
 
 const App: React.FC = () => {
   const basename = process.env.NODE_ENV === 'production' ? '/voting-platform' : '/';
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/vote/:id" element={<PollPage />} />
         <Route path="/poll/:id" element={<PollViewer />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>
   );

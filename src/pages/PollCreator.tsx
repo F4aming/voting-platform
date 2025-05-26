@@ -14,22 +14,35 @@ type Poll = {
 };
 
 const PollCreator: React.FC = () => {
-  const [title, setTitle] = useState('');
-  const [questions, setQuestions] = useState<Question[]>([
-    { questionText: '', options: ['', ''] }
-  ]);
-  const [confirmDeleteIndex, setConfirmDeleteIndex] = useState<number | null>(null);
-  const [polls, setPolls] = useState<Poll[]>([]);
-  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
-  const [toastMessage, setToastMessage] = useState('');
-  const navigate = useNavigate();
+    const [visible, setVisible] = useState(false);
+    const [title, setTitle] = useState('');
+    const [questions, setQuestions] = useState<Question[]>([
+        { questionText: '', options: ['', ''] }
+    ]);
+    const [confirmDeleteIndex, setConfirmDeleteIndex] = useState<number | null>(null);
+    const [polls, setPolls] = useState<Poll[]>([]);
+    const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+    const [toastMessage, setToastMessage] = useState('');
+    const navigate = useNavigate();
 
-  // Загрузка сохраненных опросов из localStorage при монтировании
   useEffect(() => {
     const savedPolls = localStorage.getItem('polls');
     if (savedPolls) {
-      setPolls(JSON.parse(savedPolls));
+      try {
+        const parsedPolls = JSON.parse(savedPolls);
+        setPolls(Array.isArray(parsedPolls) ? parsedPolls : []);
+      } catch {
+        setPolls([]);
+      }
     }
+
+    document.body.style.overflow = 'hidden';
+
+    setVisible(true);
+
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, []);
 
   // Добавить вопрос
@@ -128,7 +141,7 @@ const PollCreator: React.FC = () => {
   };
 
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className={`d-flex flex-column min-vh-100 page-fade ${visible ? 'visible' : ''}`}>
       <nav className="navbar navbar-expand navbar-light bg-white shadow-sm fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand d-flex align-items-center text-dark" href="/">
