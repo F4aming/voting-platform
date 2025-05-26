@@ -36,13 +36,8 @@ const PollCreator: React.FC = () => {
       }
     }
 
-    document.body.style.overflow = 'hidden';
-
     setVisible(true);
 
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, []);
 
   // Добавить вопрос
@@ -141,7 +136,7 @@ const PollCreator: React.FC = () => {
   };
 
   return (
-    <div className={`d-flex flex-column min-vh-100 page-fade ${visible ? 'visible' : ''}`}>
+   <div className={`d-flex flex-column min-vh-100 page-fade ${visible ? 'visible' : ''}`} style={{ overflowY: 'auto' }}>
       <nav className="navbar navbar-expand navbar-light bg-white shadow-sm fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand d-flex align-items-center text-dark" href="/">
