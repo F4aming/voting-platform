@@ -62,12 +62,20 @@ const HomePage: React.FC = () => {
         <header className="text-center py-5 border-bottom border-secondary">
           <h1 className="display-4 fw-bold text-dark">Платформа для голосований</h1>
           <p className="lead text-secondary mb-4">Создавайте опросы быстро и просто</p>
-          <button
-            className="btn btn-dark btn-lg rounded-pill px-5"
-            onClick={() => navigate('/create')}
-          >
-            Начать опрос/голосование
-          </button>
+          <div className="d-flex justify-content-center gap-3 flex-wrap">
+            <button
+              className="btn btn-dark btn-lg rounded-pill px-4"
+              onClick={() => navigate('/create')}
+            >
+              Создать голосование
+            </button>
+            <button
+              className="btn btn-dark btn-lg rounded-pill px-4"
+              onClick={() => navigate('/create-vote')}
+            >
+              Создать опрос
+            </button>
+          </div>
         </header>
 
         {/* Почему выбирают нас */}

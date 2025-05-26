@@ -136,7 +136,7 @@ const CreatePoll: React.FC = () => {
 
       {/* Добавляем отступ сверху, чтобы не закрывать контент под фиксированным navbar */}
       <main className="flex-grow-1 container my-5 fade-in" style={{ paddingTop: '80px' }}>
-        <h2 className="text-center fw-bold text-dark mb-4">Создание опроса</h2>
+        <h2 className="text-center fw-bold text-dark mb-4">Создание голосования</h2>
 
         <form className="create-poll-form" onSubmit={handleSubmit}>
           <div className="form-group">
@@ -204,7 +204,7 @@ const CreatePoll: React.FC = () => {
             <button type="button" className="add-option-button" onClick={addOption}>
               Добавить вариант
             </button>
-            <button type="submit" className="create-button">Создать опрос</button>
+            <button type="submit" className="create-button">Создать голосование</button>
           </div>
         </form>
 
@@ -215,7 +215,7 @@ const CreatePoll: React.FC = () => {
         <hr style={{ margin: '2rem 0' }} />
 
         <div className="poll-list-section">
-          <h3>Список созданных опросов</h3>
+          <h3>Список созданных голосований</h3>
           {polls.length === 0 ? (
             <p>Опросов пока нет.</p>
           ) : (
