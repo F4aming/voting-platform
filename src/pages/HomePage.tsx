@@ -19,7 +19,9 @@ const HomePage: React.FC = () => {
               className="me-2"
               style={{ filter: 'grayscale(100%) brightness(0)' }}
             />
-            <span className="fw-bold">Голосовалка</span>
+            <a className="nav-link fw-bold" href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
+                Голосовалка
+            </a>
           </a>
 
           {/* Кнопка для мобильных устройств, чтобы раскрыть меню */}
