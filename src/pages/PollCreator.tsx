@@ -82,10 +82,25 @@ const PollCreator: React.FC = () => {
               height={40}
               className="me-2 logo-img"
             />
-            <span className="fw-bold">Голосовалка</span>
+            <a className="nav-link fw-bold" href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
+                Голосовалка
+            </a>
           </a>
+
+        <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
+                  Главная
+                </a>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </nav>
+      
+      
 
       <main className="container my-5 flex-grow-1" style={{ paddingTop: '80px' }}>
         <h1 className="mb-4">Создание опроса</h1>
