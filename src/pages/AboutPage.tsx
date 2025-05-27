@@ -6,13 +6,20 @@ const AboutPage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    setVisible(true);
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, []);
+useEffect(() => {
+  document.body.style.overflow = 'hidden'; // Сначала блокируем прокрутку
+  setVisible(true);
+
+  const timeout = setTimeout(() => {
+    document.body.style.overflow = 'auto'; // Разрешаем через 300 мс (или другое время)
+  }, 300); // Подберите время в соответствии с вашей анимацией
+
+  return () => {
+    clearTimeout(timeout);
+    document.body.style.overflow = '';
+  };
+}, []);
+
 
   const safeNavigate = (path: string) => {
     if (location.pathname !== path) {
@@ -76,10 +83,11 @@ const AboutPage: React.FC = () => {
             top: 0,
             left: 0,
             width: '100%',
-            height: '100%',
+            height: '50%',
             border: 'none',
             borderRadius: '10px',
             boxShadow: '0 0 15px rgba(0, 0, 0, 0.2)',
+            marginTop: '80px',
         }}
         />
         </div>

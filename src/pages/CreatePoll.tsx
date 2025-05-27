@@ -219,7 +219,7 @@ const CreatePoll: React.FC = () => {
         <div className="poll-list-section">
           <h3>Список созданных голосований</h3>
           {polls.length === 0 ? (
-            <p>Опросов пока нет.</p>
+            <p> пока нет.</p>
           ) : (
             <ul className="poll-list">
               {polls.map(poll => (
