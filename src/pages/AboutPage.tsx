@@ -83,7 +83,7 @@ useEffect(() => {
             top: 0,
             left: 0,
             width: '100%',
-            height: '50%',
+            height: '60%',
             border: 'none',
             borderRadius: '10px',
             boxShadow: '0 0 15px rgba(0, 0, 0, 0.2)',
