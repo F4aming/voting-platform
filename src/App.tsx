@@ -16,7 +16,7 @@ const App: React.FC = () => {
 
 
   return (
-    <Router basename="/">
+    <Router basename="/voting-platform">
       <Routes>
         <Route path="/voting-platform" element={<HomePage />} />
         <Route path="/create" element={<CreatePoll />} />
