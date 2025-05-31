@@ -110,7 +110,6 @@ const CreatePoll: React.FC = () => {
             </a>
           </a>
 
-          {/* Кнопка для мобильных устройств, чтобы раскрыть меню */}
           <button
             className="navbar-toggler"
             type="button"
@@ -123,7 +122,6 @@ const CreatePoll: React.FC = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Навигационное меню */}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
@@ -136,7 +134,6 @@ const CreatePoll: React.FC = () => {
         </div>
       </nav>
 
-      {/* Добавляем отступ сверху, чтобы не закрывать контент под фиксированным navbar */}
       <main className="flex-grow-1 container my-5 fade-in" style={{ paddingTop: '80px' }}>
         <h2 className="text-center fw-bold text-dark mb-4">Создание голосования</h2>
 
@@ -308,7 +305,6 @@ const CreatePoll: React.FC = () => {
 
       </main>
 
-      {/* Footer */}
       <footer className="bg-dark text-white py-4 mt-auto">
         <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center">
           <div>

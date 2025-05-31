@@ -7,7 +7,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="d-flex flex-column min-vh-100">
-      {/* Fixed Navbar */}
       <nav className="navbar navbar-expand navbar-light bg-white shadow-sm fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand d-flex align-items-center text-dark" href="/">
@@ -23,8 +22,6 @@ const HomePage: React.FC = () => {
                 Голосовалка
             </a>
           </a>
-
-          {/* Кнопка для мобильных устройств, чтобы раскрыть меню */}
           <button
             className="navbar-toggler"
             type="button"
@@ -37,7 +34,6 @@ const HomePage: React.FC = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Навигационное меню */}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
@@ -48,7 +44,6 @@ const HomePage: React.FC = () => {
             </ul>
           </div>
 
-          {/* Кнопка входа */}
           <button
             className="btn btn-outline-dark ms-auto"
             onClick={() => navigate('/login')}
@@ -58,12 +53,10 @@ const HomePage: React.FC = () => {
         </div>
       </nav>
 
-      {/* Добавляем отступ сверху, чтобы не закрывать контент под фиксированным navbar */}
       <main className="flex-grow-1 container my-5 fade-in" style={{ paddingTop: '0px' }}>
-        {/* Hero Section */}
         <header className="text-center py-5 border-bottom border-secondary">
-          <h1 className="display-4 fw-bold text-dark">Платформа для голосований</h1>
-          <p className="lead text-secondary mb-4">Создавайте опросы быстро и просто</p>
+          <h1 className="display-4 fw-bold text-dark" style={{ paddingBottom: '1.5rem' }}>Платформа для голосований</h1>
+
           <div className="d-flex justify-content-center gap-3 flex-wrap">
             <button
               className="btn btn-dark btn-lg rounded-pill px-4"
@@ -80,7 +73,6 @@ const HomePage: React.FC = () => {
           </div>
         </header>
 
-        {/* Почему выбирают нас */}
         <section className="my-5">
           <h2 className="text-center fw-bold text-dark mb-4">Почему выбирают нас</h2>
           <div
@@ -94,7 +86,7 @@ const HomePage: React.FC = () => {
             {[ 
               { title: 'Просто', text: 'Интуитивно понятный интерфейс для всех пользователей.' },
               { title: 'Быстро', text: 'Создание опроса за минуту, результат — сразу.' },
-              { title: 'Надёжно', text: 'Ваши данные защищены и обрабатываются прозрачно.' },
+              { title: 'Надёжно', text: 'К чему душа лежит, к тому и руки приложатся.' },
             ].map(({ title, text }, idx) => (
               <div
                 key={title}
@@ -102,7 +94,7 @@ const HomePage: React.FC = () => {
                 style={{
                   padding: '1.5rem',
                   backgroundColor: '#fff',
-                  gridColumn: idx % 3 === 0 ? 'span 2' : 'auto', // Каждый третий блок шире
+                  gridColumn: idx % 3 === 0 ? 'span 2' : 'auto',
                   textAlign: 'center',
                   color: '#222',
                   borderRadius: '0.375rem',
@@ -126,23 +118,22 @@ const HomePage: React.FC = () => {
             }}
           >
              {[
-                { title: 'Создайте опрос', text: 'Простая форма для создания вопросов и вариантов ответов.', icon: '📝' },
-                { title: 'Cсылочка', text: 'Отправьте ссылку участникам, чтобы они могли голосовать.', icon: '📤' },
-                { title: 'Резалт', text: 'Просматривайте результаты голосования в реальном времени.', icon: '📊' },
-              ].map(({ title, text, icon }, idx) => (
+                { title: 'Создайте опрос', text: 'Простая форма для создания вопросов и вариантов ответов.'},
+                { title: 'Cсылочка', text: 'Отправьте ссылку участникам, чтобы они могли голосовать.'},
+                { title: 'Резалт', text: 'Просматривайте результаты голосования1.'},
+              ].map(({ title, text}, idx) => (
               <div
                 key={title}
                 className="card shadow-sm border-1 border-secondary"
                 style={{
                   padding: '1.5rem',
                   backgroundColor: '#fff',
-                  gridColumn: idx % 3 === 0 ? 'span 2' : 'auto', // Каждый третий блок шире
+                  gridColumn: idx % 3 === 0 ? 'span 2' : 'auto',
                   textAlign: 'center',
                   color: '#222',
                   borderRadius: '0.375rem',
                 }}
               >
-                <div style={{ fontSize: '2.5rem' }}>{icon}</div>
                 <h3 className="fw-bold mb-3">{title}</h3>
                 <p>{text}</p>
               </div>
@@ -150,7 +141,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Отзывы пользователей */}
         <section className="my-5">
           <h2 className="text-center fw-bold text-dark mb-4">Отзывы пользователей</h2>
           <div
@@ -162,16 +152,16 @@ const HomePage: React.FC = () => {
             }}
           >
             {[{
-                name: 'Ирина С.',
-                text: 'Очень удобная платформа, быстро разобралась и создала опрос для команды.',
+                name: 'Алексей Р.',
+                text: 'Пока што маловато функций(((',
               },
               {
-                name: 'Алексей П.',
-                text: 'Результаты приходят мгновенно, удобно анализировать и принимать решения.',
+                name: 'Павел Б.',
+                text: 'Очень удобная платформа, быстро разобрался и создал опрос',
               },
               {
-                name: 'Мария К.',
-                text: 'Безопасность и простота – именно то, что я искала для своих опросов.',
+                name: 'Василий М.',
+                text: 'Простота – именно то, что я искал для своих опросов',
               },
             ].map(({ name, text }, idx) => (
               <div
@@ -193,17 +183,16 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </section>
-        
-        {/* Популярные категории */}
+
         <section className="my-5 text-center">
           <h2 className="fw-bold text-dark mb-3">Популярные категории</h2>
           <div className="d-flex flex-wrap justify-content-center">
             {[
-              '🎓 Образование',
-              '🏛 Политика',
-              '🎮 Развлечения',
-              '💼 Работа',
-              '⚽ Спорт',
+              'Образование',
+              'Политика',
+              'Развлечения',
+              'Работа',
+              'Спорт',
             ].map((cat, idx) => (
               <div
                 key={idx}
@@ -216,7 +205,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Градиентный баннер */}
         <div
           className="text-white text-center py-5"
           style={{
@@ -225,11 +213,10 @@ const HomePage: React.FC = () => {
             margin: '2rem 0',
           }}
         >
-          <h2 className="fw-bold mb-3">Присоединяйтесь к тысячам пользователей!</h2>
-          <p className="lead mb-0">Создавайте опросы, делитесь результатами и принимайте решения вместе</p>
+          <h2 className="fw-bold mb-3">Присоединяйтесь к тысячам пользователей</h2>
+          <p className="lead mb-0">Создавайте опросы, делитесь результатами и принимайте решения вместе!!!</p>
         </div>
 
-        {/* Latest news/blog */}
         <section className="my-5">
           <h2 className="text-center fw-bold text-dark mb-4">Последние новости</h2>
           <div className="row g-4">
@@ -239,9 +226,9 @@ const HomePage: React.FC = () => {
                 excerpt: 'Добавлены новые типы вопросов и улучшен интерфейс.',
               },
               {
-                title: 'Обновления безопасности',
-                date: '1 мая 2025',
-                excerpt: 'Повышена защита данных пользователей и улучшены механизмы шифрования.',
+                title: 'Добавление кнопочки о платформе',
+                date: '22 мая 2025',
+                excerpt: 'Можно послушать музычку.',
               },
               {
                 title: 'Советы по созданию эффективных опросов',
@@ -262,7 +249,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Subscription form */}
         <section className="my-5 text-center">
           <h2 className="fw-bold text-dark mb-3">Подпишитесь на новости</h2>
           <form className="d-flex justify-content-center" onSubmit={e => e.preventDefault()}>
@@ -278,9 +264,6 @@ const HomePage: React.FC = () => {
         </section>
       </main>
 
-           
-
-      {/* Footer */}
       <footer className="bg-dark text-white py-4 mt-auto">
         <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center">
           <div>
